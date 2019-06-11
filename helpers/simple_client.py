@@ -4,14 +4,10 @@ import requests
 # todo: Вынести генерацию данных в отдельную функцию
 
 class SimpleCalculateClient(object):
-    _base_url = ''
-    _calculate_endpoint = ''
+    _url = ""
 
     def __init__(self, url):
-        self._base_url = url
+        self._url = url
 
-    def calculate(self, left_operand, right_operand, operation):
-        data = {"left_operand": left_operand,
-                "right_operand": right_operand,
-                "operation": operation}
-        return requests.post(self._base_url, json=data)
+    def calculate(self, expression):
+        return requests.post(self._url, json=expression)

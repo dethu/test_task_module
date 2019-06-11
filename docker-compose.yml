@@ -4,7 +4,7 @@ services:
     build: .
     volumes:
       - .:/test_env
-      - allure-content:/test_env/tmp/my_allure_results
+      - allure-content:/test_env/tmp/allure
 
   allure:
       image: "frankescobar/allure-docker-service"
