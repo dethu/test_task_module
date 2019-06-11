@@ -1,6 +1,5 @@
 from os.path import dirname
 
-
 path_to_json_schemas = '/schemas/'
 
 
