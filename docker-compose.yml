@@ -1,0 +1,19 @@
+version: '3'
+services:
+  tests:
+    build: .
+    volumes:
+      - .:/test_env
+      - allure-content:/test_env/tmp/my_allure_results
+
+  allure:
+      image: "frankescobar/allure-docker-service"
+      environment:
+        CHECK_RESULTS_EVERY_SECONDS: 10
+      ports:
+        - "4040:4040"
+        - "5050:5050"
+      volumes:
+        - allure-content:/app/allure-results
+volumes:
+  allure-content:
