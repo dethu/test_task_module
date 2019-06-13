@@ -3,7 +3,7 @@
 Клонировать проект, в директории test_task_module выполнить команду:
 `docker-compose build && docker-compose up`
 Необходимы установленые 
-**`Docker`**, **`Docker Compose`**
+**`Docker `**, как минимум **`version 18.09.2`** и **`Docker Compose`** **`version 1.23.2`**
 Краткий отчет будет в консоли, где была выполнена команда.
 Подробный доступен по адресу `http://localhost:4040`
 
